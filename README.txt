@@ -1,80 +1,90 @@
-🗂️ Sistema de Reservas – API REST con FastAPI
-API REST profesional desarrollada con FastAPI, SQLAlchemy, Alembic y MySQL, que permite gestionar recursos reservables (salas, equipos, vehículos, aulas…) y las reservas asociadas a ellos.
-Incluye autenticación JWT, autorización por roles, validaciones de disponibilidad y CRUD completo de usuarios, recursos, categorías y reservas.
+# 🗂️ Sistema de Reservas – API REST con FastAPI
 
-🚀 Características principales
-🔐 Autenticación y seguridad
-Login y registro de usuarios
+  API REST profesional desarrollada con FastAPI, SQLAlchemy, Alembic y MySQL, que permite gestionar recursos reservables (salas, equipos, vehículos, aulas…) y las reservas asociadas a ellos.
+  Incluye autenticación JWT, autorización por roles, validaciones de disponibilidad y CRUD completo de usuarios, recursos, categorías y reservas.
 
-Tokens JWT con expiración
+-----
 
-Hashing de contraseñas con bcrypt
+# 🚀 Características principales
 
-Roles: user y admin
+  ## 🔐 Autenticación y seguridad
 
-Protección de rutas mediante dependencias (get_current_user, get_current_admin)
+    - Login y registro de usuarios
 
-👤 Usuarios
-Ver perfil propio
+    - Tokens JWT con expiración
 
-Actualizar email y contraseña
+    - Hashing de contraseñas con bcrypt
 
-Listar, ver, actualizar y eliminar usuarios (solo admin)
+    - Roles: user y admin
 
-📦 Recursos
-Crear, listar, actualizar y eliminar recursos (admin)
+    - Protección de rutas mediante dependencias (get_current_user, get_current_admin)
 
-Activar/desactivar recursos
+  ## 👤 Usuarios
 
-Asociar categorías
+    - Ver perfil propio
 
-Añadir y eliminar campos personalizados
+    - Actualizar email y contraseña
 
-🏷️ Categorías
-Crear, listar, actualizar y eliminar categorías (admin)
+    - Listar, ver, actualizar y eliminar usuarios (solo admin)
 
-📅 Reservas
-Crear reservas
+  ## 📦 Recursos
+    - Crear, listar, actualizar y eliminar recursos (admin)
 
-Listar reservas
+    - Activar/desactivar recursos
 
-Obtener reserva por ID
+    - Asociar categorías
 
-Cancelar reservas
+    - Añadir y eliminar campos personalizados
 
-Validación de solapamientos
+  ## 🏷️ Categorías
+    - Crear, listar, actualizar y eliminar categorías (admin)
 
-Validación de disponibilidad
+  ## 📅 Reservas
+    - Crear reservas
 
-Permisos por rol (user/admin)
+    - Listar reservas
 
-🧱 Arquitectura
-FastAPI modular (routers, models, schemas, dependencies)
+    - Obtener reserva por ID
 
-SQLAlchemy ORM
+    - Cancelar reservas
 
-Migraciones con Alembic
+    - Validación de solapamientos
 
-Documentación automática con Swagger
+    - Validación de disponibilidad
 
-📦 Tecnologías utilizadas
-Python 3
+    - Permisos por rol (user/admin)
 
-FastAPI
+  ## 🧱 Arquitectura
+    - FastAPI modular (routers, models, schemas, dependencies)
 
-SQLAlchemy
+    - SQLAlchemy ORM
 
-Alembic
+    - Migraciones con Alembic
 
-MySQL
+    - Documentación automática con Swagger
 
-Pydantic
+-----
 
-python‑jose (JWT)
+# 📦 Tecnologías utilizadas
+  - Python 3
 
-Uvicorn
+  - FastAPI
 
-📁 Estructura del repositorio
+  - SQLAlchemy
+
+  - Alembic
+
+  - MySQL
+
+  - Pydantic
+
+  - python‑jose (JWT)
+
+  - Uvicorn
+
+-----
+
+# 📁 Estructura del repositorio
 
 sistema-reservas/
 │
@@ -101,8 +111,10 @@ sistema-reservas/
 ├── requirements.txt
 └── README.md
 
+-----
 
-🛠️ Instalación y ejecución
+# 🛠️ Instalación y ejecución
+
 1️⃣ Clonar el repositorio
 git clone https://github.com/NoelYTejerina/sistema-reservas.git
 cd sistema-reservas
@@ -130,147 +142,120 @@ uvicorn app.main:app --reload
 http://localhost:8000/docs
 Panel para probar Endpoints
 
-📚 Documentación completa
-La documentación técnica del proyecto está disponible en:
-/docs/Documentacion_Sistema_Reservas.pdf
-Incluye:
+-----
 
-Arquitectura
+# 📚 Documentación completa
+  La documentación técnica del proyecto está disponible en:
+  /docs/Documentacion_Sistema_Reservas.pdf
+  Incluye:
 
-Modelos y relaciones
+    - Arquitectura
 
-Reglas de negocio
+    - Modelos y relaciones
 
-Seguridad JWT
+    - Reglas de negocio
 
-Migraciones
+    - Seguridad JWT
 
-Endpoints
+    - Migraciones
 
-Validaciones
+    - Endpoints
 
-📡 Endpoints principales
-🔑 Autenticación
-POST /auth/register
+    - Validaciones
 
-POST /auth/login
+-----
 
-👤 Usuarios
-GET /users/me
+# 📡 Endpoints principales
 
-PUT /users/me/update
+  ## 🔑 Autenticación
+    - POST /auth/register
 
-GET /users/
+    - POST /auth/login
 
-GET /users/{id}
+  ## 👤 Usuarios
+    - GET /users/me
 
-PUT /users/{id}/update
+    - PUT /users/me/update
 
-DELETE /users/{id}
+    - GET /users/
 
-📦 Recursos
-POST /resources/
+    - GET /users/{id}
 
-GET /resources/
+    - PUT /users/{id}/update
 
-GET /resources/{id}
+    - DELETE /users/{id}
 
-PUT /resources/{id}
+  ## 📦 Recursos
+    - POST /resources/
 
-DELETE /resources/{id}
+    - GET /resources/
 
-POST /resources/{id}/custom-fields
+    - GET /resources/{id}
 
-DELETE /resources/{id}/custom-fields/{field_id}
+    - PUT /resources/{id}
 
-🏷️ Categorías
-POST /categories/
+    - DELETE /resources/{id}
 
-GET /categories/
+    - POST /resources/{id}/custom-fields
 
-PUT /categories/{id}
+    - DELETE /resources/{id}/custom-fields/{field_id}
 
-DELETE /categories/{id}
+  ## 🏷️ Categorías
+    - POST /categories/
 
-📅 Reservas
-POST /reservations/
+    - GET /categories/
 
-GET /reservations/
+    - PUT /categories/{id}
 
-GET /reservations/{id}
+    - DELETE /categories/{id}
 
-DELETE /reservations/{id}
+  ## 📅 Reservas
+    - POST /reservations/
 
-🧠 Validaciones y reglas de negocio
-Un recurso solo puede reservarse si está activo
+    - GET /reservations/
 
-start_time < end_time
+    - GET /reservations/{id}
 
-No puede haber solapamiento de reservas
+    - DELETE /reservations/{id}
 
-Un usuario solo puede cancelar sus reservas
+  ##🧠 Validaciones y reglas de negocio
+    - Un recurso solo puede reservarse si está activo
 
-Un admin puede cancelar cualquier reserva
+    - start_time < end_time
 
-Emails únicos
+    - No puede haber solapamiento de reservas
 
-Categorías sin duplicados
+    - Un usuario solo puede cancelar sus reservas
 
-Recursos y usuarios deben existir
+    - Un admin puede cancelar cualquier reserva
 
-🎨 Demo visual del proyecto
+    - Emails únicos
+
+    - Categorías sin duplicados
+
+    - Recursos y usuarios deben existir
+
+  #🎨 Demo visual del proyecto
 📸 https://NoelYTejerina.github.io/sistema-reservas/
 
 
-La demo mostrará:
-
-Login
-
-Gestión de usuarios
-
-Gestión de recursos
-
-Gestión de categorías
-
-Creación y cancelación de reservas
-
-Validaciones de solapamiento
-
-🚀 Extensiones futuras
-🔧 Campos personalizados avanzados
-Tipos de campo
-
-Validaciones dinámicas
-
-Formularios configurables
-
-📅 Calendario visual
-Vista mensual/semanal
-
-Integración con FullCalendar
-
-Bloqueos en tiempo real
-
-✉️ Notificaciones por email
-Confirmación de reserva
-
-Recordatorios
-
-Cancelaciones
-
-🖥️ Panel de administración
-Dashboard
-
-Gestión visual de recursos
-
-Estadísticas
-
-🌐 Frontend (React/Vue)
-Autenticación JWT
-
-Gestión de estado
-
-UI moderna
+# 🚀 Extensiones futuras
+  - Campos personalizados avanzados
+  - Tipos de campo
+  - Validaciones dinámicas
+  - Formularios configurables
+  - Calendario visual
+  - Vista mensual/semanal
+  - Integración con FullCalendar
+  - Bloqueos en tiempo real
+  - Notificaciones por email
+  - Confirmación de reserva
+  - Recordatorios
+  - Cancelaciones
+  - Panel de administración (Dashboard)
+  - Gestión visual de recursos
+  - Estadísticas
+  - ....
 
 ## 📄 Licencia
 
