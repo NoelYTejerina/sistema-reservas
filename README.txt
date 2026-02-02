@@ -236,7 +236,7 @@ Panel para probar Endpoints
     - Recursos y usuarios deben existir
 
   #🎨 Demo visual del proyecto
-📸 https://NoelYTejerina.github.io/sistema-reservas/
+📸 https://NoelYTejerina.github.io/sistema-reservas/demo
 
 
 # 🚀 Extensiones futuras
