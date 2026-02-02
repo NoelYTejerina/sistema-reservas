@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo — Sistema de Reservas (API REST)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Sistema de Reservas — API REST</h1>
+    <p class="intro">
+        Esta demo muestra una vista rápida del funcionamiento del Sistema de Reservas desarrollado con FastAPI.
+        Incluye capturas reales del flujo de autenticación, gestión de recursos, categorías y reservas,
+        así como validaciones clave como solapamientos y permisos por rol.
+    </p>
+
+    <h2>Capturas</h2>
+
+    <div class="gallery">
+
+        <div class="item">
+            <h3>Introducir token (Swagger)</h3>
+            <img src="capturas/introducir_token.png" alt="Introducir token">
+        </div>
+
+        <div class="item">
+            <h3>Validar token</h3>
+            <img src="capturas/validar_token.png" alt="Validar token">
+        </div>
+
+        <div class="item">
+            <h3>Crear categoría</h3>
+            <img src="capturas/crear_categoria.png" alt="Crear categoría">
+        </div>
+
+        <div class="item">
+            <h3>Crear recurso</h3>
+            <img src="capturas/crear_recurso.png" alt="Crear recurso">
+        </div>
+
+        <div class="item">
+            <h3>Añadir campo personalizado</h3>
+            <img src="capturas/custom_field.png" alt="Campo personalizado">
+        </div>
+
+        <div class="item">
+            <h3>Listar recursos</h3>
+            <img src="capturas/listar_recursos.png" alt="Listar recursos">
+        </div>
+
+        <div class="item">
+            <h3>Crear reserva</h3>
+            <img src="capturas/crear_reserva.png" alt="Crear reserva">
+        </div>
+
+        <div class="item">
+            <h3>Validación de solapamiento</h3>
+            <img src="capturas/solapamiento_reserva.png" alt="Solapamiento de reserva">
+        </div>
+
+        <div class="item">
+            <h3>Listar reservas</h3>
+            <img src="capturas/listar_reservas.png" alt="Listar reservas">
+        </div>
+
+        <div class="item">
+            <h3>Cancelar reserva</h3>
+            <img src="capturas/cancelar_reserva.png" alt="Cancelar reserva">
+        </div>
+
+        <div class="item">
+            <h3>Listar usuarios (admin)</h3>
+            <img src="capturas/listar_usuarios_admin.png" alt="Listar usuarios admin">
+        </div>
+
+        <div class="item">
+            <h3>Intento de listar usuarios (user)</h3>
+            <img src="capturas/listar_usuario_user.png" alt="Listar usuarios user">
+        </div>
+
+    </div>
+
+    <h2>Funcionalidades mostradas</h2>
+    <ul>
+        <li>Autenticación mediante JWT</li>
+        <li>Validación de token en Swagger</li>
+        <li>Gestión de categorías</li>
+        <li>Gestión de recursos</li>
+        <li>Campos personalizados por recurso</li>
+        <li>Creación de reservas</li>
+        <li>Validación de solapamientos</li>
+        <li>Cancelación de reservas</li>
+        <li>Permisos por rol (user/admin)</li>
+    </ul>
+
+    <h2>Tecnologías utilizadas</h2>
+    <ul>
+        <li>FastAPI</li>
+        <li>SQLAlchemy</li>
+        <li>Alembic</li>
+        <li>MySQL</li>
+        <li>Pydantic</li>
+        <li>python-jose (JWT)</li>
+        <li>Uvicorn</li>
+    </ul>
+
+</body>
+</html>
